@@ -1,13 +1,13 @@
 #' Read a SpatialExperiment from disk
 #'
-#' Read a \linkS4class{SpatialExperiment} object from its on-disk representation.
+#' Read a \link[SpatialExperiment]{SpatialExperiment} object from its on-disk representation.
 #'
-#' @param path String containing a path to a directory, itself created using the \code{\link{saveObject}} method for \linkS4class{SpatialExperiment} objects.
-#' @param metadata Named list of metadata for this object, see \code{\link{readObjectFile}} for details.
-#' @param ... Further arguments passed to \code{\link{readSingleCellExperiment}} and internal \code{\link{altReadObject}} calls.
+#' @param path String containing a path to a directory, itself created using the \code{\link[alabaster.base]{saveObject}} method for \link[SpatialExperiment]{SpatialExperiment} objects.
+#' @param metadata Named list of metadata for this object, see \code{\link[alabaster.base]{readObjectFile}} for details.
+#' @param ... Further arguments passed to \code{\link[alabaster.sce]{readSingleCellExperiment}} and internal \code{\link[alabaster.base]{altReadObject}} calls.
 #'
 #' @return 
-#' A \linkS4class{SpatialExperiment} object.
+#' A \link[SpatialExperiment]{SpatialExperiment} object.
 #'
 #' @seealso
 #' \code{"\link{saveObject,SpatialExperiment-method}"}, to save a SpatialExperiment to disk.
@@ -91,6 +91,7 @@ readSpatialExperiment <- function(path, metadata, ...) {
 #' @export
 #' @importFrom alabaster.sce loadSingleCellExperiment
 loadSpatialExperiment <- function(exp.info, project) {
+    .Deprecated(old = "loadSpatialExperiment", new = "readSpatialExperiment")
     sce <- loadSingleCellExperiment(exp.info, project)
 
     # Loading spatial stats.

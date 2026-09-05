@@ -8,24 +8,24 @@
 \S4method{saveObject}{SpatialExperiment}(x, path, SpatialExperiment.reuse.images = "link", ...)
 }
 \arguments{
-\item{x}{A \linkS4class{SpatialExperiment} object.}
+\item{x}{A \link[SpatialExperiment]{SpatialExperiment} object.}
 
 \item{path}{String containing the path to a directory in which to save \code{x}.}
 
 \item{SpatialExperiment.reuse.images}{Whether to re-use existing files on disk (e.g., by copying or linking to them in \code{path})
-when an image in \code{\link[SpatialExperiment]{imgData}(x)} contains a reference to its original file location (e.g., via \code{\link[SpatialExperiemnt]{imgSource}}).
+when an image in \code{\link[SpatialExperiment]{imgData}(x)} contains a reference to its original file location (e.g., via \code{\link[SpatialExperiment]{imgSource}}).
 This can be any of the values described for \code{action=} in \code{\link[alabaster.base]{cloneFile}}.}
 
-\item{...}{Further arguments to pass to internal \code{\link{saveObject}} calls.}
+\item{...}{Further arguments to pass to internal \code{\link[alabaster.base]{saveObject}} calls.}
 }
 \value{
 \code{x} is saved to \code{path} and \code{NULL} is invisibly returned.
 }
 \description{
-Save a \linkS4class{SpatialExperiment} object to its on-disk representation.
+Save a \link[SpatialExperiment]{SpatialExperiment} object to its on-disk representation.
 }
 \details{
-Currently, only PNG and TIFF image formats are supported in the \code{\link{imgData}}.
+Currently, only PNG and TIFF image formats are supported in the \code{\link[SpatialExperiment]{imgData}}.
 All other images will be re-saved as PNG.
 }
 \examples{

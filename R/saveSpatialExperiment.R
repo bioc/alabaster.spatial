@@ -1,18 +1,18 @@
 #' Save a spatial experiment
 #'
-#' Save a \linkS4class{SpatialExperiment} object to its on-disk representation.
+#' Save a \link[SpatialExperiment]{SpatialExperiment} object to its on-disk representation.
 #'
-#' @param x A \linkS4class{SpatialExperiment} object.
+#' @param x A \link[SpatialExperiment]{SpatialExperiment} object.
 #' @inheritParams alabaster.base::saveObject
 #' @param SpatialExperiment.reuse.images Whether to re-use existing files on disk (e.g., by copying or linking to them in \code{path})
-#' when an image in \code{\link[SpatialExperiment]{imgData}(x)} contains a reference to its original file location (e.g., via \code{\link[SpatialExperiemnt]{imgSource}}).
+#' when an image in \code{\link[SpatialExperiment]{imgData}(x)} contains a reference to its original file location (e.g., via \code{\link[SpatialExperiment]{imgSource}}).
 #' This can be any of the values described for \code{action=} in \code{\link[alabaster.base]{cloneFile}}.
-#' @param ... Further arguments to pass to internal \code{\link{saveObject}} calls.
+#' @param ... Further arguments to pass to internal \code{\link[alabaster.base]{saveObject}} calls.
 #' 
 #' @author Aaron Lun
 #'
 #' @details
-#' Currently, only PNG and TIFF image formats are supported in the \code{\link{imgData}}.
+#' Currently, only PNG and TIFF image formats are supported in the \code{\link[SpatialExperiment]{imgData}}.
 #' All other images will be re-saved as PNG.
 #'
 #' @return \code{x} is saved to \code{path} and \code{NULL} is invisibly returned.

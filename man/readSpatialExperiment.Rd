@@ -8,17 +8,17 @@
 readSpatialExperiment(path, metadata, ...)
 }
 \arguments{
-\item{path}{String containing a path to a directory, itself created using the \code{\link{saveObject}} method for \linkS4class{SpatialExperiment} objects.}
+\item{path}{String containing a path to a directory, itself created using the \code{\link[alabaster.base]{saveObject}} method for \link[SpatialExperiment]{SpatialExperiment} objects.}
 
-\item{metadata}{Named list of metadata for this object, see \code{\link{readObjectFile}} for details.}
+\item{metadata}{Named list of metadata for this object, see \code{\link[alabaster.base]{readObjectFile}} for details.}
 
-\item{...}{Further arguments passed to \code{\link{readSingleCellExperiment}} and internal \code{\link{altReadObject}} calls.}
+\item{...}{Further arguments passed to \code{\link[alabaster.sce]{readSingleCellExperiment}} and internal \code{\link[alabaster.base]{altReadObject}} calls.}
 }
 \value{
-A \linkS4class{SpatialExperiment} object.
+A \link[SpatialExperiment]{SpatialExperiment} object.
 }
 \description{
-Read a \linkS4class{SpatialExperiment} object from its on-disk representation.
+Read a \link[SpatialExperiment]{SpatialExperiment} object from its on-disk representation.
 }
 \examples{
 library(SpatialExperiment)

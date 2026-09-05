@@ -23,6 +23,7 @@
 #' @importFrom alabaster.base acquireFile
 #' @importFrom SpatialExperiment SpatialImage
 loadSpatialImage <- function(img.info, project) {
+    .Deprecated()
     fpath <- acquireFile(project, img.info$path)
     SpatialImage(fpath, is.url=FALSE)
 }
